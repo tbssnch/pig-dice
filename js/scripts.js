@@ -10,17 +10,24 @@ function add (a,b) {
   return a+b;
 }
 
-Player.prototype.newTurnScore = function (roll) {
+Player.prototype.newTurn = function (roll) {
   if (roll === 1) {
     this.turnScore = 0;
     return this.turnScore;
   } else {
   turnScoreArray.push(roll);
 
-  var turnScoreTotal = turnScoreArray.reduce(add, 0);
-  this.turnScore = turnScoreTotal;
-  return this.turnScore;
+  this.turnScore = turnScoreArray.reduce(add, 0);
+  // return this.turnScore;
+
+  this.gameScore =+ this.turnScore;
+  return this.gameScore;
 }
+
+// Player.prototype.newGameTotal = function (rollScore) {
+//   this.gameScore = this.gameScore + this.turnScore;
+//   return this.gameScore;
+// }
 
 };
 
@@ -32,15 +39,19 @@ $(document).ready(function() {
   $(".roll").click(function() {
     var playerOne = new Player (true,0,0);
     event.preventDefault();
-debugger;
+// debugger;
     var rollScore = Math.floor(Math.random() * 6) + 1;
 
-    var currentScore = playerOne.newTurnScore(rollScore);
+    var currentScore = playerOne.newTurn(rollScore);
 
     $(".playerOneRollScore").text(rollScore);
     $(".playerOneTurnScore").text(currentScore);
-    $(".playerTwoRollScore").text(rollScore);
-    $(".playerTwoTurnScore").text(currentScore);
+    $(".playerOneScore").text(playerOne.gameScore);
+
+
+
+    // $(".playerTwoRollScore").text(rollScore);
+    // $(".playerTwoTurnScore").text(currentScore);
 
   });
 });
