@@ -1,12 +1,14 @@
 .btn {
   color: white;
+  margin-bottom: 10px;
+  width: 132px;
 }
 
 .hold {
-  background-color: #E1CF0D;
-  
+  background-color: #b30000;
+
 }
 
 .roll {
-  background-color: #044603;
+  background-color: #000;
 }

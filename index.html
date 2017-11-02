@@ -11,15 +11,52 @@
   <body>
     <div class="container">
       <h1>Pig Dice</h1>
-      <div class="row">
+      <!-- <h5>A fun game you can play with a single six-sided die.</h5> -->
+      <!-- <h3>Rules of the Game</h3> -->
+      <!-- <p>On a turn, the player rolls repeatedly until either: </p>
+        <ul class="rules">
+          <li> A 1 is rolled; </li>
+          <li> The player decides to end their turn by "holding", or choosing not to continue rolling the die.</li>
+        </ul>
+      <p>If a 1 is rolled, the player's turn is immediately ended, and the player will receive no points for that turn.</p>
+      <p>If the player chooses to hold, all of the points rolled during that turn are added to his or her score.</p> -->
+
+      <div class="row players">
         <div class="col-md-6">
-      <div>
-          <button type="click" class="btn roll">Roll Dice!</button>
-          <button type="click" class="btn hold">HOLD PLEASE</button>
+          <div class="row playerOneIdentity">
+            <h3>PLAYER 1</h3>
+          </div>
+          <div class="row">
+            <p> Game Score: <span class="playerOneScore"></span></p>
+          </div>
+          <div class ="row playerOneRoll">
+            <p>This Roll: <span class="playerOneRollScore"></span></p>
+          </div>
+          <div class=" row playerOneTurn">
+            <p>Turn Score: <span class="playerOneTurnScore"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row playerTwoIdentity">
+            <h3>PLAYER 2</h3>
+          </div>
+          <div class="row">
+            <p>Game Score: <span class="playerTwoScore"></span></p>
+          </div>
+          <div class="row playerTworoll">
+            <p>This Roll: <span class="playerTwoRollScore"></span></p>
+          </div>
+          <div class=" row playerTwoTurn">
+            <p>Turn Score: <span class="playerTwoTurnScore"></span>
+          </div>
+        </div>
       </div>
-      <div class="diceRoll">
-        <p>This Roll: <span class="thisRoll"></span></p>
-        <p>Turn Total: <span class="turnTotal"></span></p>
+      <div class="row">
+        <div class="container">
+          <button type="click" class="btn roll">Roll Dice!</button>
+          <br>
+          <button type="click" class="btn hold">HOLD PLEASE</button>
+        </div>
       </div>
     </div>
   </body>
